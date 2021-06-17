@@ -44,7 +44,7 @@ function App() {
     let personasTemp;
     if (id === -1) {
       let ultimaId = personas[personas.length - 1].id;
-      let personasTemp = personas;
+      personasTemp = personas;
 
       personasTemp.push({
         id: ++ultimaId,
