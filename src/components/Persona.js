@@ -2,6 +2,7 @@ export const Persona = (props) => {
   const {
     persona: { id, nombre, apellidos, vivo },
     borrarPersona,
+    editarPersona,
   } = props;
 
   return (
@@ -16,7 +17,12 @@ export const Persona = (props) => {
         <p>{`Vivo: ${vivo}`}</p>
       </div>
       <div className="row botonera">
-        <button className="btn bg-primary col-4">Editar</button>
+        <button
+          className="btn bg-primary col-4"
+          onClick={() => editarPersona(id)}
+        >
+          Editar
+        </button>
         <button
           className="btn bg-danger col-4"
           onClick={() => borrarPersona(id)}
